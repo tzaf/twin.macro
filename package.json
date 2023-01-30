@@ -1,6 +1,6 @@
 {
   "name": "twin.macro",
-  "version": "2.8.2-venus.1",
+  "version": "2.8.2-venus.3",
   "description": "Twin blends the magic of Tailwind with the flexibility of css-in-js",
   "main": "macro.js",
   "types": "types/index.d.ts",
