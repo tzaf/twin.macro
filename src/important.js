@@ -32,7 +32,10 @@ const splitImportant = ({ className, state }) => {
     className = hasSuffix ? className.slice(0, -1) : className.slice(1)
   }
 
-  if (state.config.important === true) {
+  if (
+    state.config.important === true &&
+    !['container', 'from-white'].includes(className)
+  ) {
     hasImportant = true
   }
 
