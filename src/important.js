@@ -26,10 +26,14 @@ const mergeImportant = (style, hasImportant) => {
 const splitImportant = ({ className, state }) => {
   const hasPrefix = className.slice(0, 1) === '!'
   const hasSuffix = className.slice(-1) === '!'
-  const hasImportant = hasSuffix || hasPrefix || state.config.important
+  let hasImportant = hasSuffix || hasPrefix
 
   if (hasImportant) {
     className = hasSuffix ? className.slice(0, -1) : className.slice(1)
+  }
+
+  if (state.config.important === true) {
+    hasImportant = true
   }
 
   const important = hasImportant ? ' !important' : ''
